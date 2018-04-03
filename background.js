@@ -8,7 +8,17 @@ browser.browserAction.onClicked.addListener(() => {
 		var urlString = tabs[0].url;
 		var storageCleanupStatus = "Success!";
 
-		browser.tabs.executeScript({code: `sessionStorage.clear();`});
+		if(urlString.indexOf("about:") != 0){
+			browser.tabs.executeScript(tabs[0].id, {code: `sessionStorage.clear();`});
+			if(isLoggingEnabled){
+				console.log("Session storage REMOVED.");
+			}
+		}else{
+			if(isLoggingEnabled){
+				console.log("Ignoring tab because of the URL: " + urlString );
+			}
+		}
+
 		try {
 			var url = new URL(urlString);
 
@@ -144,7 +154,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 		function onStorageRemoved() {
 			if (isLoggingEnabled) {
-				console.log('Storage REMOVED');
+				console.log('Local Storage REMOVED');
 			}
 		}
 
@@ -156,7 +166,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 		function onStorageRemovalError(error) {
 			if (isLoggingEnabled) {
-				console.log('Storage removal ERROR:' + error);
+				console.log('Local Storage removal ERROR:' + error);
 			}
 			storageCleanupStatus = 'Failure!'
 		}
@@ -169,7 +179,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 		function onStorageDeletionError(error) {
 			if (isLoggingEnabled) {
-				console.log('Storage deletion ERROR:' + error);
+				console.log('Local Storage deletion ERROR:' + error);
 			}
 			storageCleanupStatus = 'Failure!'
 		}

@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
-    "name": "Del Cookies, Session and Local Storage Button",
-    "version": "2.8",
+    "name": "Remove Cookies, Local, Session Storage Button",
+    "version": "2.11",
     "homepage_url": "https://github.com/marcosdiez/RemoveCookiesFirefox",
     "description": "Toolbar button for removing cookies, local storage and session storage on current tab",
     "icons": {
