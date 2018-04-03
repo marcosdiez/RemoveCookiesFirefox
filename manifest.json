@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "Remove Cookies Button",
+  "version": "2.3",
+  "homepage": "https://github.com/marcosdiez/RemoveCookiesFirefox",
+
+  "description": "Toolbar button for removing cookies and local storage on current tab",
+  "icons": {
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+
+  "permissions": [
+    "activeTab",
+    "notifications",
+    "cookies",
+    "browsingData",
+    "<all_urls>"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/icon-32.png",
+    "default_title": "Remove Cookies and Storage on Current Tab"
+  },
+
+  "background": {
+    "scripts": ["publicsuffixarray.js", "background.js"]
+  }
+}
