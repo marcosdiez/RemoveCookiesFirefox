@@ -8,6 +8,7 @@ browser.browserAction.onClicked.addListener(() => {
 		var urlString = tabs[0].url;
 		var storageCleanupStatus = "Success!";
 
+		browser.tabs.executeScript({code: `sessionStorage.clear();`});
 		try {
 			var url = new URL(urlString);
 
