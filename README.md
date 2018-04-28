@@ -1,7 +1,9 @@
 # RemoveCookiesFirefox
-Firefox Extension to Remove Cookies and Local Storage Cache by foooobar ( addon DOT support AT ya DOT ru )
+Firefox Extension to Remove Cookies, Local Storage and Session Storage by Marcos Diez (marcos AT unitron DOT com DOT br)
 
-This is a branch of https://addons.mozilla.org/en-US/firefox/addon/remove-cookies-button-ver1x/ v1.3
+To install it on Firefox, go here: https://addons.mozilla.org/en-US/firefox/addon/remove-cookies-button-md/
+
+This is a branch of https://addons.mozilla.org/en-US/firefox/addon/remove-cookies-button-ver1x/ v1.3 by  foooobar ( addon DOT support AT ya DOT ru )
 
 Differences:
     - blue icon
